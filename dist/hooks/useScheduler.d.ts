@@ -1,0 +1,28 @@
+import { SchedulerProps } from "../types";
+declare const useScheduler: () => {
+    events: import("../types").ProcessedEvent[];
+    setEvents: (events: SchedulerProps["events"]) => void;
+    disableViewNavigator: boolean | undefined;
+    setDisableViewNavigator: (disableViewNavigator: SchedulerProps["disableViewNavigator"]) => void;
+    selectedDate: Date;
+    setSelectedDate: (date: SchedulerProps["selectedDate"]) => void;
+    goToDay: (day: Date) => void;
+    view: import("../components/nav/Navigation").View;
+    setView: (view: SchedulerProps["view"]) => void;
+    schedulerLocale: Locale;
+    setSchedulerLocale: (locale: SchedulerProps["locale"]) => void;
+    triggerDialog: (status: boolean, event?: import("../types").ProcessedEvent | import("../store/types").SelectedRange | undefined) => void;
+    resources: import("../types").DefaultRecourse[];
+    serResources: (resources: SchedulerProps["resources"]) => void;
+    resourceViewMode: "default" | "tabs";
+    setResourceViewMode: (mode: SchedulerProps["resourceViewMode"]) => void;
+    hourFormat: "12" | "24";
+    setHourFormat: (format: SchedulerProps["hourFormat"]) => void;
+    timeZone: string | undefined;
+    setTimeZone: (timeZone: SchedulerProps["timeZone"]) => void;
+    triggerLoading: (status: boolean) => void;
+    height: number;
+    setHeight: (height: SchedulerProps["height"]) => void;
+    setDirection: (direction: SchedulerProps["direction"]) => void;
+};
+export { useScheduler };
