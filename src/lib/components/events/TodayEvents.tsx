@@ -45,7 +45,8 @@ const TodayEvents = ({
         const slotsFromTop = minituesFromTop / step;
 
         const borderFactor = slotsFromTop + BORDER_HEIGHT;
-        const top = topSpace + borderFactor / 2;
+        const top = topSpace; // + borderFactor / 2;
+        console.log("top:", top, "border:", borderFactor, "topSpace:", topSpace);
 
         if (top < 0) {
           return null;
